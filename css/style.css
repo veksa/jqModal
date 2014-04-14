@@ -1,0 +1,18 @@
+/* base styles */
+
+body{ color: black; font: 13px/15px Arial, sans-serif; }
+
+.container{ width: 800px; margin: 20px auto; text-align: center; }
+.link{ border-bottom: 1px dotted; cursor: pointer; }
+.link:hover{ color: red; }
+
+/* popup styles */
+
+.jqmOverlay{ background: #001c38; }
+.jqmWindowOut{ position: fixed; width: 100%; height: 100%; left: 0; top: 0; overflow-y: scroll; z-index: 30000; }
+
+.jqmWindow .top-close{ display: block; cursor: pointer; width: 40px; height: 40px; line-height: 40px; position: absolute; right: 0; top: 0; background: yellow; font-size: 30px; text-align: center; }
+.jqmWindow .top-close:hover{ color: red; }
+
+.jqmWindow{ background: #fff; position: absolute; left: 50%; top: 133px; opacity: 0; display: none; padding: 30px; }
+.jqmWindowOut .jqmWindow{ min-height: 500px; left: auto; position: relative; top: auto !important; margin: 133px auto 100px !important; width: 842px !important; background: #fff; position: relative; border-radius: 2px; padding: 34px 60px 40px; }
