@@ -27,11 +27,9 @@ function onLoadjqm( hash ){
 		$('body').css('overflow', 'hidden').css('paddingRight', '15px');
 		
 		$('.jqmWindowOut').on('click', function(e){
-			$(this).find('.jqmClose').click();
-		});
-		
-		$('.jqmWindowOut').find('.jqmWindow').on('click', function(e){
-			e.stopPropagation();          
+			if( $( e.toElement ).hasClass('jqmWindowOut') ){
+				$(this).find('.jqmClose').click();
+			}
 		});
 	}
 	
