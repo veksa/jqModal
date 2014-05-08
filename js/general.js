@@ -12,6 +12,11 @@ function onLoadjqm( hash ){
 				console.log('onLoadjqm: warning, not defined type');
 			}
 		}
+		
+		if( /^data\-autoloadhtml\-(.+)$/.test( attr.nodeName ) ){
+			var key = attr.nodeName.match(/^data\-autoloadhtml\-(.+)$/)[1];
+			$('.jqmWindow .'+key).html( $('.'+$(hash.t).data('autoloadhtml-'+key)).html() );
+		}
 	});
 	
 	if( $(hash.t).data('autohide') ){
